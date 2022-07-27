@@ -1,0 +1,39 @@
+.accordion{
+    width: 80%;
+    background: #eee;
+    border: 1px solid grey;
+    margin: 0 auto;
+}
+
+.accordion-item{
+
+}
+
+.accordion-item__input{
+    position: absolute;
+    top:0;
+    left: 0;
+    opacity: 0;
+}
+
+.accordion-item__input:checked ~ .accordion-item__body{
+    max-height: 500px;
+    margin-left: 10px;
+    text-overflow: ellipsis;
+    opacity: 1;
+}
+
+.accordion-item__label{
+    background-color: aqua;
+    display: block;
+    padding: 5px;
+}
+
+.accordion-item__body{
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0.2;
+    transition-timing-function: ease;
+    transition-duration: .5s;
+}
