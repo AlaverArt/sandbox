@@ -22,7 +22,7 @@
 
 .accordion__body{
     box-sizing: content-box;
-    padding: 0 10px;
+    padding: 0 0 0 10px;
     max-height: 0;
     overflow: hidden;
     opacity: 0.2;
@@ -31,10 +31,14 @@
     transition-duration: .5s;
 }
 
-.accordion__item_active .accordion__body{
-    padding: 10px;
+.accordion__item_active > .accordion__body{
+    /*padding: 10px;*/
     overflow: hidden;
     opacity: 1;
     transition-timing-function: ease;
     transition-duration: .5s;
+}
+
+.accordion__body > .accordion__item{
+    padding-left: 10px;
 }
